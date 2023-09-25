@@ -16,7 +16,24 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('GetX Tutorial'),
       ),
       body: Column(
-        children: [],
+        children: [
+          Card(
+            child: ListTile(
+              title: Text('GetX Dialogue Alert'),
+              subtitle: Text('GetX Dialogue Alert With GetX'),
+              onTap: () {
+                Get.defaultDialog(
+                  title: 'Delete Chat',
+                  titlePadding: EdgeInsets.only(top: 20),
+                  contentPadding: EdgeInsets.all(20),
+                  middleText: "Are you sure you want to delete this chat",
+                  textConfirm: "Yes",
+                  textCancel: "No",
+                );
+              },
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -24,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             'BoostYourSoul',
             'Subscribe my channel',
             icon: const Icon(Icons.notifications),
-            snackPosition: SnackPosition.BOTTOM,
+            snackPosition: SnackPosition.TOP,
           );
         },
       ),
