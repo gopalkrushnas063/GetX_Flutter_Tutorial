@@ -1,5 +1,4 @@
-# flutter_getx
-
+# Flutter_GetX
 A new Flutter project.
 
 ## Getting Started
